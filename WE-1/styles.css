@@ -1,0 +1,24 @@
+h2 {
+    background-color: rgb(204, 118, 132);
+}
+
+#h2-id {
+    color: blue;
+}
+
+.h2-tag {
+    color: yellow;
+    background-color: pink;
+}
+
+#h1-tag {
+    background-color: aqua;
+}
+
+h3 {
+    background-color: orange;
+}
+
+input[type='text'] {
+    background-color: cyan;
+}
