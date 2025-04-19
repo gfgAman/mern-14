@@ -50,4 +50,6 @@ git add .
 
 10. git status(to check the current status of code)
 
+11. retrieve data from repository
+git pull origin main
 

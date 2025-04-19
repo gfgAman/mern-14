@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 100vh;
+            width: 100vw;
+            display: grid;
+            /* grid-template-areas: "H H H H"
+                "SB C C C"
+                "SB C C C"
+                "F F F F"; */
+                grid-template-rows: 1fr 1fr 100px 1fr;
+                gap: 1rem;
+        }
+        .header{
+            /* grid-template-areas: 100px; */
+            /* grid-area: H; */
+            background-color: yellow;
+        }
+        .sidebar{
+            /* grid-area: SB; */
+            background-color: red;
+        }
+        .content{
+            /* grid-area: C; */
+            background-color: aqua;
+        }
+        .footer{
+            /* grid-area: F; */
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="child header">header</div>
+        <div class="child sidebar">SideBar</div>
+        <div class="child content">Content</div>
+        <div class="child footer">Footer</div>
+        <div class="child header">header</div>
+        <div class="child sidebar">SideBar</div>
+        <div class="child content">Content</div>
+        <div class="child footer">Footer</div>
+    </div>
+</body>
+
+</html>
