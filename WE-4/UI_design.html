@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .header{
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem;
+        }
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            width: 35%;
+        }
+        body{
+            background-image: url('classroom.jfif');
+            background-size: cover;
+        }
+        .body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .text{
+            font-size: 5rem;
+            color: white;
+        }
+        button{
+            padding: 1rem;
+            border-radius: 30%;
+            border: none;
+        }
+
+        .child{
+            color: white;
+            text-decoration: none;
+        }
+        .child:hover{
+            cursor: pointer;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">Logo</div>
+        <div class="nav">
+            <a href="UI_design.html" class="child">Home</a>
+            <a href="contact.html" class="child">Contact</a>
+            <a href="careers.html" class="child">Careers</a>
+            <a href="login.html" class="child">Login</a>
+        </div>
+    </div>
+    <div class="body">
+        <div class="text">Hi, Welcome to classroom</div>
+        <button>Explore now</button>
+    </div>
+</body>
+
+</html>
