@@ -53,7 +53,7 @@
 
 //array methods
 
-const arr = [2,3,1,5,8,7]
+// const arr = [2, 3, 1, 5, 8, 7]
 
 // console.log(typeof arr); //datatype
 // console.log(arr.length); 
@@ -81,7 +81,7 @@ const arr = [2,3,1,5,8,7]
 
 // console.log(arr.indexOf(8));
 
-const str = 'hello world'
+// const str = 'hello world'
 
 // const newStr = str.split(' ').sort().reverse().join('')
 // const joinStr = newStr
@@ -91,4 +91,22 @@ const str = 'hello world'
 // console.log(str[6])
 // console.log(str.charAt(7));
 
-console.log(str[2].toUpperCase());
+// console.log(str[2].toUpperCase());
+
+// function sum(a, b) {
+//     return a + b
+// }
+
+var a = 10
+let b = 'hello'
+const c = true
+
+function abc(x,y){
+    return x+y
+}
+
+console.log(abc(2,3));
+console.log(a);
+console.log(b);
+console.log(c);
+
