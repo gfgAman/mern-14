@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <style>
+        #parent {
+            height: 50vh;
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #child {
+            width: 75%;
+            height: 75%;
+            background-color: yellow;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #subchild {
+            width: 75%;
+            height: 75%;
+            background-color: green
+        }
+    </style> -->
+</head>
+<!-- <div id="parent">
+    <div id="child">
+        <div id="subchild"></div>
+    </div> -->
+<!-- </div> -->
+<!-- <div id="parent">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+    <div class="child1">1</div>
+    <div class="child1">2</div>
+    <div class="child1">3</div>
+    <div class="child1">4</div>
+    <div class="child1">5</div>
+    <div id="child">*</div>
+</div> -->
+<div id="main">
+    <h1 id="heading">Heloworld</h1>
+    <h2 id="para"></h2>
+</div>
+
+<body>
+    <script>
+        //    console.log(document.getElementById('parent'));
+        // console.log(document.getElementsByClassName('child'));
+        // console.log(document.getElementsByTagName('div'));
+
+        // const showMyName = () => {
+        //     console.log('my name is aman');
+        // }
+        // showMyName()
+        // document.getElementById('btn').addEventListener('mouseover',()=>console.log('hello there!!'))
+
+        // const findOne = () => console.log('i am parent div');
+
+        //event bubbling, event capturing, event stop propogation
+        // document.getElementById('parent').addEventListener('click', () => console.log('parent'), true)
+        // document.getElementById('child').addEventListener('click', (e) => {
+        //     // e.stopPropagation()
+        //     console.log('child')
+        // }, true)
+        // document.getElementById('subchild').addEventListener('click', (e) => {
+        //     // e.stopPropagation()
+        //     console.log('subchild')
+        // }, true)
+
+
+        //event delegation
+
+        // const parent = document.getElementById('parent')
+        // // console.log(parent);
+        // const child = document.getElementsByClassName('child')
+
+        // const func = (e)=>{}
+        
+        // parent.addEventListener('click',func(){})
+        // parent.addEventListener('click', (e) => {
+        //     if (e.target.classList.contains('child')||e.target.classList.contains('child1'))
+        //         console.log(e.target.innerText);
+        // })
+        // console.log(child);
+       
+
+        const main = document.getElementById('main')
+        main.style.backgroundColor= 'yellow'
+        const heading = document.getElementById('heading')
+        heading.innerText = 'heiii'
+        heading.style.color = 'red'
+
+    // console.log(main.textContent);
+    </script>
+</body>
+
+</html>

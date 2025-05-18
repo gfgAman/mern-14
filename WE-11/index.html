@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- todolist -->
+    <!-- <input type="text" placeholder="Enter your Tasks of the day..." id="input">
+    <button id="addTask">Add Task</button>
+    <button id="deleteAll">Delete All</button>
+    <div id="container"></div> -->
+
+
+    <!-- //data-fetching -->
+    <div id="container"></div>
+    <!-- <button id="btn">click me</button> -->
+
+    <!-- <script src="script.js"></script> -->
+    <script>
+
+        //todolist
+        // const addTask = document.getElementById('addTask')
+        // const container = document.getElementById('container')
+
+        // addTask.addEventListener('click', () => {
+        //     const input = document.getElementById('input')
+        //     if(!input){
+        //         return
+        //     }
+
+        //     const list = document.createElement('li')
+        //     const task = document.createElement('p')
+        //     const dlt = document.createElement('button')
+        //     task.innerText = input.value
+        //     dlt.innerText = 'Delete'
+        //     list.style.backgroundColor = 'yellow'
+        //     list.style.display = 'flex'
+        //     list.style.justifyContent = 'space-between'
+        //     list.appendChild(task)
+        //     list.appendChild(dlt)
+
+        //     container.appendChild(list)
+        //     input.value = ''
+        //     dlt.addEventListener('click', () => list.remove())
+        // })
+
+        // const deleteAll = document.getElementById('deleteAll')
+        // deleteAll.addEventListener('click', () => container.innerHTML = "")
+
+
+        //data-fetching
+        const fetchData = async () => {
+            const data = await fetch('https://jsonplaceholder.typicode.com/users')
+            const users = await data.json()
+            console.log(users);
+            return users
+
+        }
+
+        fetchData().then(data => {
+            const container = document.getElementById('container')
+
+            data.forEach(obj => {
+                console.log(obj);
+                const username = document.createElement('h3')
+                const city = document.createElement('p')
+                const email = document.createElement('p')
+                const list = document.createElement('li')
+
+                username.innerText = obj.username
+                city.innerText = obj.address.city
+                email.innerText = obj.email
+                list.appendChild(username)
+                list.appendChild(city)
+                list.appendChild(email)
+
+                container.appendChild(list)
+
+            })
+        }).catch(err => console.log(err))
+        // const btn = document.getElementById('btn')
+
+        // btn.addEventListener('click', () => fetchData())
+
+
+    </script>
+</body>
+
+</html>
