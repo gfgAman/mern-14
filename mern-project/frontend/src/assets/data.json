@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Wireless Mouse",
+        "img": "https://cdn.thewirecutter.com/wp-content/media/2024/07/yoga-mat-2048px-1633-2x1-1.jpg?auto=webp&quality=75&crop=1.91:1&width=1200",
+        "price": 25.99,
+        "category": "Electronics",
+        "inStock": true
+    },
+    {
+        "name": "Bluetooth Headphones",
+        "img": "https://www.boat-lifestyle.com/cdn/shop/products/main2_b66dce6b-710d-49cb-9d1c-2bc8c9c0ab15.png?v=1645698328",
+        "price": 79.99,
+        "category": "Electronics",
+        "inStock": true
+    },
+    {
+        "name": "Laptop Stand",
+        "img": "https://m.media-amazon.com/images/I/71xlXzGX9aL.jpg",
+        "price": 45.00,
+        "category": "Accessories",
+        "inStock": false
+    },
+    {
+        "name": "Mechanical Keyboard",
+        "img": "https://images-cdn.ubuy.co.in/63400c68afe02d2b0c7aeb85-mechanical-gaming-keyboard-87-keys-small.jpg",
+        "price": 120.49,
+        "category": "Electronics",
+        "inStock": true
+    },
+    {
+        "name": "Gaming Chair",
+        "img": "https://thesleepcompany.in/cdn/shop/files/1_1b9e5e7f-c769-4382-a997-7dbdc2b13803.webp?v=1748803174",
+        "price": 199.99,
+        "category": "Furniture",
+        "inStock": true
+    },
+    {
+        "name": "4K Monitor",
+        "img": "https://m.media-amazon.com/images/I/71GRpZb6+vL._AC_UF1000,1000_QL80_.jpg",
+        "price": 329.99,
+        "category": "Electronics",
+        "inStock": true
+    },
+    {
+        "name": "Smart Watch",
+        "img": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw61458d43/images/Titan/Catalog/90188AP01_1.jpg?sw=600&sh=600",
+        "price": 149.99,
+        "category": "Wearables",
+        "inStock": false
+    },
+    {
+        "name": "Electric Kettle",
+        "img": "https://www.jiomart.com/images/product/original/491373220/prestige-1-5-litres-1500-watts-electric-kettle-pkoss-digital-o491373220-p491373220-0-202010110045.jpeg?im=Resize=(1000,1000)",
+        "price": 39.99,
+        "category": "Home Appliances",
+        "inStock": true
+    },
+    {
+        "name": "Water Bottle",
+        "img": "https://market99.com/cdn/shop/files/motivational-sipper-travel-water-bottle-blue-yellow-pink-1-liter-water-bottles-1.jpg?v=1737480559",
+        "price": 19.99,
+        "category": "Fitness",
+        "inStock": true
+    },
+    {
+        "name": "Yoga Mat",
+        "img": "https://cdn.thewirecutter.com/wp-content/media/2024/07/yoga-mat-2048px-1633-2x1-1.jpg?auto=webp&quality=75&crop=1.91:1&width=1200",
+        "price": 29.99,
+        "category": "Fitness",
+        "inStock": true
+    }
+]
