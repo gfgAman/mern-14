@@ -8,7 +8,7 @@ userRoutes.post('/signup', signup)
 userRoutes.post('/login', login)
 userRoutes.get('/users', getAllUsers)
 userRoutes.get('/user', getUser)
-userRoutes.put('/update-user', updateUserData)
+// userRoutes.put('/update-user', updateUserData)
 userRoutes.delete('/remove', deleteUser)
 
 module.exports.userRoutes = userRoutes

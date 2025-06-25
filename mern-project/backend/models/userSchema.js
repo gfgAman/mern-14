@@ -9,7 +9,8 @@ const user = mongoose.Schema({
     email: {
         type: String,
         index: true,
-        requires: true
+        required: true,
+        unique: true
     },
     contact: {
         type: Number,
