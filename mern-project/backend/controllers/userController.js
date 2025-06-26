@@ -57,7 +57,7 @@ const getUser = async (req, res) => {
 
 }
 
-const login = async (req, res) => {
+const   login = async (req, res) => {
     try {
         const { email, password } = req.body;
 
@@ -81,6 +81,7 @@ const login = async (req, res) => {
         let isVerified = false;
 
         if (accessToken) {
+            
             try {
                 const decoded = jwt.verify(accessToken, process.env.SECRET_KEY);
                 isVerified = true;
@@ -88,7 +89,7 @@ const login = async (req, res) => {
                 // Token is invalid or expired — issue a new refresh token
                 const refreshToken = jwt.sign(
                     { email: user.email, username: user.username },
-                    process.env.REFRESH_TOKEN_SECRET,
+                    process.env.SECRET_KEY,
                     { expiresIn: '1d' }
                 );
 
