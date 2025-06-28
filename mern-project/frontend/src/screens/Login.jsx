@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../auth/AuthProvider'
+import axios from 'axios'
+import {toast, ToastContainer} from 'react-toastify'
 
 const Login = () => {
   const [email, setEmail] = useState('')
@@ -10,21 +12,36 @@ const Login = () => {
   const { login } = useAuth()
   const navigate = useNavigate()
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    try {
 
-    // basic validation
-    if (!email || !password) {
-      setError('Please fill in all fields')
-      return
+      // basic validation
+      if (!email || !password) {
+        setError('Please fill in all fields')
+        return
+      }
+      const res = await axios.post('http://localhost:3000/login', { email: email, password: password },{
+        "content-type":"Application",
+        "Authorization":_
+      })
+
+      console.log(res, 'resnsn');
+
+      if(res?.data?.status===404){
+        toast.success(res?.data?.message)
+        return
+      }
+      // simulate token from backend (in real app, make API call here)
+      // const dummyToken = 'dummy_access_token_123'
+      // login(dummyToken)
+
+      // redirect to protected route (e.g. products or cart)
+      // navigate('/cart')
     }
-
-    // simulate token from backend (in real app, make API call here)
-    const dummyToken = 'dummy_access_token_123'
-    login(dummyToken)
-
-    // redirect to protected route (e.g. products or cart)
-    navigate('/cart')
+    catch (err) {
+      console.log(err);
+    }
   }
 
   return (
@@ -59,7 +76,9 @@ const Login = () => {
         >
           Login
         </button>
+        <div onClick={() => navigate('/signup')}>Signup</div>
       </form>
+      <ToastContainer/>
     </div>
   )
 }

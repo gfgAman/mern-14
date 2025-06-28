@@ -1,6 +1,25 @@
-import data from '../assets/data.json'
+// import data from '../assets/data.json'
+import { useEffect, useState } from 'react'
 import Card from '../components/Card'
+import axios from 'axios'
 const Home = () => {
+  const [data, setData] = useState([])
+
+  const fetchData = async () => {
+    try {
+
+      const data = await axios.get('http://localhost:3000/products')
+      console.log(data?.data?.products);
+      setData(data?.data?.products)
+    }
+    catch (err) {
+      console.log(err);
+    }
+
+  }
+  useEffect(() => {
+    fetchData()
+  }, [])
   return (
     <div>
       <h1>Product listing</h1>

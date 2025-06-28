@@ -57,20 +57,20 @@ const getUser = async (req, res) => {
 
 }
 
-const   login = async (req, res) => {
+const login = async (req, res) => {
     try {
         const { email, password } = req.body;
 
         if (!email || !password)
-            return res.status(400).json({ message: 'Please fill all the fields', status: 400, success: false });
+            return res.status(200).json({ message: 'Please fill all the fields', status: 400, success: false });
 
         const user = await USER.findOne({ email });
         if (!user)
-            return res.status(404).json({ message: 'User not found', status: 404, success: false });
+            return res.status(200).json({ message: 'User not found', status: 404, success: false });
 
         const isMatched = await bcrypt.compare(password, user.password);
         if (!isMatched)
-            return res.status(401).json({ message: 'Incorrect password', status: 401, success: false });
+            return res.status(200).json({ message: 'Incorrect password', status: 401, success: false });
 
         // Check if token is present in header
         let accessToken = null;
@@ -81,24 +81,19 @@ const   login = async (req, res) => {
         let isVerified = false;
 
         if (accessToken) {
-            
+
             try {
-                const decoded = jwt.verify(accessToken, process.env.SECRET_KEY);
+                jwt.verify(accessToken, process.env.SECRET_KEY);
                 isVerified = true;
             } catch (err) {
                 // Token is invalid or expired — issue a new refresh token
                 const refreshToken = jwt.sign(
                     { email: user.email, username: user.username },
                     process.env.SECRET_KEY,
-                    { expiresIn: '1d' }
+                    { expiresIn: '1hr' }
                 );
 
-                res.cookie('jwt', refreshToken, {
-                    httpOnly: true,
-                    sameSite: 'None',
-                    secure: true,
-                    maxAge: 24 * 60 * 60 * 1000,
-                });
+                res.send(refreshToken)
             }
         }
 

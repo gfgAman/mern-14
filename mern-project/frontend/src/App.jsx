@@ -38,6 +38,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path='*' element={<Navigate to="/login" />} />
           <Route path="product/:title" element={<ProductDetails />} />
+          
         </Routes>
       </Router>
     </AuthProvider>
